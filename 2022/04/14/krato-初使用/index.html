@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2022 | Wu-Log</title>
+  <title>kratos 初使用 | Wu-Log</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Wu-Log">
-<meta property="og:url" content="https://nick0511.github.io/archives/2022/index.html">
+  <meta name="description" content="Kratos 一套轻量级 Go 微服务框架，包含大量微服务相关框架及工具。 包含组件  APIs：协议通信以 HTTP&#x2F;gRPC 为基础，通过 Protobuf 进行定义； Errors：通过 Protobuf 的 Enum 作为错误码定义，以及工具生成判定接口； Metadata：在协议通信 HTTP&#x2F;gRPC 中，通过 Middleware 规范化服务元信息传递； Conf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kratos 初使用">
+<meta property="og:url" content="https://nick0511.github.io/2022/04/14/krato-%E5%88%9D%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Wu-Log">
+<meta property="og:description" content="Kratos 一套轻量级 Go 微服务框架，包含大量微服务相关框架及工具。 包含组件  APIs：协议通信以 HTTP&#x2F;gRPC 为基础，通过 Protobuf 进行定义； Errors：通过 Protobuf 的 Enum 作为错误码定义，以及工具生成判定接口； Metadata：在协议通信 HTTP&#x2F;gRPC 中，通过 Middleware 规范化服务元信息传递； Conf">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-14T11:51:45.000Z">
+<meta property="article:modified_time" content="2022-04-15T00:46:03.075Z">
 <meta property="article:author" content="Nick Wu">
+<meta property="article:tag" content="krato">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Wu-Log" type="application/atom+xml">
@@ -69,153 +74,79 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/18/20-important-things/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-18T01:36:27.000Z" itemprop="datePublished">Apr 18</time>
+        <section id="main"><article id="post-krato-初使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/14/krato-%E5%88%9D%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2022-04-14T11:51:45.000Z" itemprop="datePublished">2022-04-14</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/18/20-important-things/">20 important things</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      kratos 初使用
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/15/30dMakeCppServer/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-15T01:13:28.000Z" itemprop="datePublished">Apr 15</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/15/30dMakeCppServer/">30dMakeCppServer</a>
-    </h1>
-  
+        <p>Kratos 一套轻量级 Go 微服务框架，包含大量微服务相关框架及工具。</p>
+<p>包含组件</p>
+<ul>
+<li>APIs：协议通信以 HTTP&#x2F;gRPC 为基础，通过 Protobuf 进行定义；</li>
+<li>Errors：通过 Protobuf 的 Enum 作为错误码定义，以及工具生成判定接口；</li>
+<li>Metadata：在协议通信 HTTP&#x2F;gRPC 中，通过 Middleware 规范化服务元信息传递；</li>
+<li>Config：支持多数据源方式，进行配置合并铺平，通过 Atomic 方式支持动态配置；</li>
+<li>Logger：标准日志接口，可方便集成三方 log 库，并可通过 fluentd 收集日志；</li>
+<li>Metrics：统一指标接口，可以实现各种指标系统，默认集成 Prometheus；</li>
+<li>Tracing：遵循 OpenTelemetry 规范定义，以实现微服务链路追踪；</li>
+<li>Encoding：支持 Accept 和 Content-Type 进行自动选择内容编码；</li>
+<li>Transport：通用的 HTTP&#x2F;gRPC 传输层，实现统一的 Middleware 插件支持；</li>
+<li>Registry：实现统一注册中心接口，可插件化对接各种注册中心；</li>
+</ul>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://go-kratos.dev/docs/">https://go-kratos.dev/docs/</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/14/krato-%E5%88%9D%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-14T11:51:45.000Z" itemprop="datePublished">Apr 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/14/krato-%E5%88%9D%E4%BD%BF%E7%94%A8/">kratos 初使用</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/14/gopher-pdf/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-14T05:54:58.000Z" itemprop="datePublished">Apr 14</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nick0511.github.io/2022/04/14/krato-%E5%88%9D%E4%BD%BF%E7%94%A8/" data-id="cl1zqm5n2000113lj2uby6wci" data-title="kratos 初使用" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/14/gopher-pdf/">gopher-pdf</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/14/2022-Todo-List/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-14T01:22:06.000Z" itemprop="datePublished">Apr 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/14/2022-Todo-List/">2022 Todo List</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/13/swagger-proto-%E5%88%9D%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-13T06:02:11.000Z" itemprop="datePublished">Apr 13</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/13/swagger-proto-%E5%88%9D%E4%BD%BF%E7%94%A8/">swagger - proto 初使用</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/krato/" rel="tag">krato</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/04/12/go-memory-model/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-04-12T01:53:30.000Z" itemprop="datePublished">Apr 12</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/04/12/go-memory-model/">go memory model</a>
-    </h1>
+    <a href="/2022/04/15/30dMakeCppServer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          30dMakeCppServer
+        
+      </div>
+    </a>
   
+  
+    <a href="/2022/04/14/gopher-pdf/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">gopher-pdf</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
