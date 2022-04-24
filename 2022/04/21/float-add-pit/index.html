@@ -6,15 +6,15 @@
   
   <title>float add pit | Wu-Log</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="浮点数相加的细节 123456789101112131415package mainimport &quot;fmt&quot;func main() &amp;#123;	a :&#x3D; 0.1	b :&#x3D; 0.2	c :&#x3D; a + b	fmt.Println(c, (a + b))	fmt.Println(c &#x3D;&#x3D; (0.1 + 0.2))&amp;#125;0.30000000000000004 0.3000000">
+  <meta name="description" content="浮点数相加的细节">
 <meta property="og:type" content="article">
 <meta property="og:title" content="float add pit">
 <meta property="og:url" content="https://nick0511.github.io/2022/04/21/float-add-pit/index.html">
 <meta property="og:site_name" content="Wu-Log">
-<meta property="og:description" content="浮点数相加的细节 123456789101112131415package mainimport &quot;fmt&quot;func main() &amp;#123;	a :&#x3D; 0.1	b :&#x3D; 0.2	c :&#x3D; a + b	fmt.Println(c, (a + b))	fmt.Println(c &#x3D;&#x3D; (0.1 + 0.2))&amp;#125;0.30000000000000004 0.3000000">
+<meta property="og:description" content="浮点数相加的细节">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-21T01:26:55.000Z">
-<meta property="article:modified_time" content="2022-04-21T01:33:38.697Z">
+<meta property="article:modified_time" content="2022-04-24T13:04:46.647Z">
 <meta property="article:author" content="Nick Wu">
 <meta property="article:tag" content="code pit">
 <meta name="twitter:card" content="summary">
@@ -97,6 +97,8 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>浮点数相加的细节</p>
+<span id="more"></span>
+
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	a := <span class="number">0.1</span></span><br><span class="line">	b := <span class="number">0.2</span></span><br><span class="line">	c := a + b</span><br><span class="line">	fmt.Println(c, (a + b))</span><br><span class="line">	fmt.Println(c == (<span class="number">0.1</span> + <span class="number">0.2</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">0.30000000000000004</span> <span class="number">0.30000000000000004</span></span><br><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
       
     </div>
